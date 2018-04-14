@@ -1,4 +1,4 @@
-#Pokusila jsem se vytvorit taktiku hry pro pocitac, ale
+#Pokusila jsem se vytvorit taktiku hry pro pocitac, ale 
 #jeste to neni idealni.
 #Na to hraci pole by asi bylo lepsi neco, co se da jednoduse menit.
 #Taky si nejsem jista, zda jsem zvolila dobrou taktiku pro stavbu programu
@@ -6,7 +6,6 @@
 #podle to ho volit tah pocitace.
 
 #Varuji predem, z to je to dlouhe a asi i neprehledne.
-#nejsou zapracovany poznamky po kontrole, nutno zapracovat
 
 from random import randrange, choice
 import textwrap
@@ -48,7 +47,7 @@ def nahodny_tah(kolo, symbol):
     tah = randrange(3,17)                   #Ve vetsine pripadu neni takticke hrat na kraje,
     while kolo[tah -1] != "-":              #proto jsem vyber omezila
         tah = randrange(3,17)
-    else:                               #Musi byt else? myslim, ze ne
+    else:
         print("nahodny")
         return tah-1
 
