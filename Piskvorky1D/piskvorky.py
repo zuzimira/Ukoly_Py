@@ -6,7 +6,7 @@
 #podle to ho volit tah pocitace.
 
 #Varuji predem, z to je to dlouhe a asi i neprehledne.
-#nejsou zapracovany poznamky po kontrole
+#nejsou zapracovany poznamky po kontrole, nutno zapracovat
 
 from random import randrange, choice
 import textwrap
