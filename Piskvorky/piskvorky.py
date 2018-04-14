@@ -47,7 +47,7 @@ def nahodny_tah(kolo, symbol):
     tah = randrange(3,17)                   #Ve vetsine pripadu neni takticke hrat na kraje,
     while kolo[tah -1] != "-":              #proto jsem vyber omezila
         tah = randrange(3,17)
-    else:
+    else:                               #Musi byt else? myslim, ze ne
         print("nahodny")
         return tah-1
 
