@@ -1,4 +1,4 @@
-#Pokusila jsem se vytvorit taktiku hry pro pocitac, ale 
+#Pokusila jsem se vytvorit taktiku hry pro pocitac, ale
 #jeste to neni idealni.
 #Na to hraci pole by asi bylo lepsi neco, co se da jednoduse menit.
 #Taky si nejsem jista, zda jsem zvolila dobrou taktiku pro stavbu programu
@@ -29,15 +29,19 @@ def tah_hrace (kolo, symbol):
     jedu=True
     if "-" in kolo:
         while jedu:
-            poziceHrac = int(input("Zadej pozici na kterou chces vlozit symbol, ja nasledne vlozim svuj symbol: "))
-            print()
-            if poziceHrac >20 or poziceHrac < 1:
-                print("Zadal jsi spatnou pozici policka.")
-            elif kolo[poziceHrac-1] != "-":
-                print("Toto policko je jiz obsazene.")
+            poziceHrac =input("Zadej pozici na kterou chces vlozit symbol, ja nasledne vlozim svuj symbol: ")
+            if not poziceHrac.isdigit():
+                print('Nezadal jsi cislo, zkus to znova!')
             else:
-                kolo = kolo[:poziceHrac-1] + symbol + kolo[poziceHrac:]
-                jedu=False
+                print()
+                poziceHrac = int(poziceHrac)
+                if poziceHrac >20 or poziceHrac < 1:
+                    print("Zadal jsi spatnou pozici policka.")
+                elif kolo[poziceHrac-1] != "-":
+                    print("Toto policko je jiz obsazene.")
+                else:
+                    kolo = kolo[:poziceHrac-1] + symbol + kolo[poziceHrac:]
+                    jedu=False
 
     return (kolo)
 
