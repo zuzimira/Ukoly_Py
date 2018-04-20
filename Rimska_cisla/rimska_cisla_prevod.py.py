@@ -30,7 +30,7 @@ rimske_cislo = rimske_cislo.upper()
 def over_vstup(uzivatel_vstup):
     """Overi, zda zadany retezec je rimske cislo ve spravnem formatu
     Pokud neni vraci False a tiskne seznam chyb, pokud ano, vraci True"""
-    
+
     for i in rimske_cislice:            #kontrola poctu jednotlivych znaku bezprostredne za sebou
         if 4*i in uzivatel_vstup:
             print('Rimske cislo nesmi obsahovat ctyri stejne znaky za sebou.')
@@ -41,7 +41,7 @@ def over_vstup(uzivatel_vstup):
         if i not in rimske_cislice:
             print('Zadany znak {} neni soucasti sady pismen pro rimska cisla.'.format(i))
             return False
-    
+
     for k in nepovolene_kombinace:      #kontrola nepovolenych kombinaci
         if k in uzivatel_vstup:
             seznam_chyb.append(k)
@@ -49,14 +49,14 @@ def over_vstup(uzivatel_vstup):
         print("Byla zadana nedovolena kombinace znaku, chyba je v techto sekvencich: ")
         print(seznam_chyb)
         return False
-    
+
     return True                         #Pokud je vse v poradku, vraci True
 
 def preved(uzivatel_vstup):
     """Prevede jednotliva pismena na arabske cislice """
 
     for i in range (len(uzivatel_vstup)):      #prevod zadaneho retezce na pole cisel
-       
+
         if rimske_cislo[i] =="I":
             arabske_cislice.append(1)
 
@@ -77,7 +77,7 @@ def preved(uzivatel_vstup):
 
         elif rimske_cislo[i] =="M":
             arabske_cislice.append(1000)
-    
+
     return arabske_cislice
 
 
@@ -94,15 +94,14 @@ def prepocitej(uzivatel_vstup):
 
         elif arabske_cislice[i] < arabske_cislice[i+1]:
             arabske_cislo -= arabske_cislice[i]
-    
+
     if arabske_cislo > 3999:                    #omezeni velikosti rimskych cisel
         return print ("Rimska cisla jsou pouze do 3999, tvoje cislo je prilis velke.")
-         
+
     else:
         return ('Zadane cislo {} ma hodnotu {}.'.format(uzivatel_vstup, arabske_cislo + arabske_cislice[len(uzivatel_vstup)-1]))     #posledni cislice se vzdy pricita
 
 
-                              
+#hlavni program                              
 if over_vstup(rimske_cislo):            # Pokud je spravny vstup, zacina prepoct
     print(prepocitej(rimske_cislo))     # Tisk vysledneho cisla
-
