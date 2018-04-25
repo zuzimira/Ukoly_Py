@@ -1,3 +1,4 @@
+
 #ukoly z lekce 6, 9.-14.
 #snad nevadi vse v jednom
 
@@ -52,19 +53,17 @@ while True:                                                 #ukol 14
         continue
     else:
         pocet_radku = int(pocet_radku)
+        break
 
-    tabulka(pocet_radku, 'X')                               #ukol 9
-    print()
-    nasobilka(pocet_radku)                                  #ukol 10
-    print()
-    tabulka_trojuhelnik(pocet_radku, 'X')                   #ukol 11
-    print()
-    obrys_tabulky(pocet_radku, 'X')                         #ukol 13
+tabulka(pocet_radku, 'X')                               #ukol 9
+print()
+nasobilka(pocet_radku)                                  #ukol 10
+print()
+tabulka_trojuhelnik(pocet_radku, 'X')                   #ukol 11
+print()
+obrys_tabulky(pocet_radku, 'X')                         #ukol 13
 
-    #Rekne, zda je radek prvni
-    for i in range(pocet_radku):                            #ukol 12
-        print("prvni radek ") if i == 0 else print("neni prvni ")
-    print()
-
-
-    break
+#Rekne, zda je radek prvni
+for i in range(pocet_radku):                            #ukol 12
+    print("prvni radek ") if i == 0 else print("neni prvni ")
+print()
