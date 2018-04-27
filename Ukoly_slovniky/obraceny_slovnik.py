@@ -1,3 +1,11 @@
+narozeniny = {
+    'Hanka': '20.03.',
+    'Petr': '05.05.',
+    'Jitka': '20.03.',
+    'Adam': '15.11.',
+
+}
+
 # BONUS
 # vytvoř ze stávajího slovníku nový "obrácený" slovník,
 # kde klíčem bude vždy datum a hodnotou seznam jmen
@@ -16,4 +24,4 @@ for polozka in narozeniny.items():
         narozeniny_obraceno[polozka[1]].append(polozka[0])
 
 
-print(narozeniny_obraceno)   
+print(narozeniny_obraceno)
