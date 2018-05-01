@@ -1,6 +1,6 @@
-#Pridala jsem if, aby se spocitaly pouze znaky, ktere jeste nejsou ve slovnikuself.
-#Ale nejsem si jista, zda je to zefektivneni vyznamneself.
-#Asi se to projevi u delsich textu
+#Pridala jsem if, aby se spocitaly pouze znaky, ktere jeste nejsou ve slovniku.
+#Ale nejsem si jista, zda je to zefektivneni vyznamne.
+#Asi se to projevi u delsich textu.
 
 def secti_znaky(retezec):
     """Vrati slovnik, kde klice jsou jednotlive znaky se zadaneho retezce
@@ -16,7 +16,7 @@ def secti_znaky(retezec):
 #ktere scitam. Odpadlo mi tim if, ktere se musi projizdet pri kazdem znaku a
 #vyrazne se snizil pocet kroku.
 #Je to lepsi?
-#Ja to neumim posoudit, co je pro efektivnost lepsis.
+#Ja to neumim posoudit, co je pro efektivnost lepsi.
 #Existuje na to nejaky navod, jak to poznat?
 
 def secti_znaky1(retezec):
