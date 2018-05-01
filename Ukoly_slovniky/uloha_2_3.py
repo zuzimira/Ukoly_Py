@@ -3,7 +3,8 @@ def secti_znaky(retezec):
     a hodnoty je jejich cetnost"""
     slovnik_znaky = {}
     for znak in retezec:
-        slovnik_znaky[znak] = retezec.count(znak)
+        if znak not in slovnik_znaky:
+            slovnik_znaky[znak] = retezec.count(znak)
     return(slovnik_znaky)
 
 def vypis_slovnik(slovnik):
@@ -18,5 +19,5 @@ def vypis_slovnik(slovnik):
         i+=1
 
 
+
 print(vypis_slovnik(secti_znaky('!kobyla ma maly bok!')))
-    
