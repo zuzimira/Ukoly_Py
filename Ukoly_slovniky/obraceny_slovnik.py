@@ -12,16 +12,16 @@ narozeniny = {
 # (tj. počítej s tím, že jich může být u jednoho data více)
 
 narozeniny_obraceno = {}
-seznam = []
 
-for polozka in narozeniny.items():
 
-    if polozka[1] not in narozeniny_obraceno:
-        seznam.append(polozka[0])
-        narozeniny_obraceno[polozka[1]] = seznam
-        seznam = []
+for jmeno, datum in narozeniny.items():
+
+    if datum not in narozeniny_obraceno:
+
+        narozeniny_obraceno[datum] = [jmeno]        #vytvorim seznam
+        
     else:
-        narozeniny_obraceno[polozka[1]].append(polozka[0])
+        narozeniny_obraceno[datum].append(jmeno)
 
 
 print(narozeniny_obraceno)
