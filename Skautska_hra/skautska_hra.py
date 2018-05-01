@@ -32,4 +32,7 @@ def vypis_hru(slovnik):
     print()
     for i in slovnik.values():
         print('{} '.format(random.choice(i)), end = '')
-    print()    
+    print()
+
+
+vypis_hru(odpovedi(moznosti))     
