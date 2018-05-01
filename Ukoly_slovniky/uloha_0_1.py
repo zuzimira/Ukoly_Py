@@ -15,5 +15,13 @@ def secti(slovnik):
         suma_hodnot += dvojice[1]
     return suma_klicu, suma_hodnot
 
+#jednodussi scitani
+def secti1(slovnik):
+    """Vrati sumu vsech klicu a sumu vsech hodnot"""
+
+    return sum(slovnik.keys()), sum(slovnik.values())
+
+
 print(slovnik_mocniny(7))
 print(secti(slovnik_mocniny(7)))
+print(secti1(slovnik_mocniny(7)))
