@@ -10,13 +10,13 @@ def tiskni_sibenici(cislo_obrazku):
 
 
 
-def ukazuji_slovo (pismeno, slovo, retezec):                #doresit ten vstup z n-tice
+def ukazuji_slovo (pismeno, slovo, retezec):
     """Vrati retezec s uhodnutymi pismeny a slovo bez uhodnutych pismen."""
 
     while pismeno in slovo:
         pozice = slovo.index(pismeno)
         retezec = retezec[:2*pozice]+pismeno + retezec[2*pozice+1:]     #ty dvojky tam jsou kvuli mezeram, ktere oddeluji - ve slove
-        slovo = slovo[:pozice]+ "*" + slovo[pozice+1:]                  #uhodnute pismeno se vymeni za mezeru
+        slovo = slovo[:pozice]+ "*" + slovo[pozice+1:]                  #uhodnute pismeno se vymeni za *
 
     return(retezec, slovo)
 
@@ -33,9 +33,9 @@ def vyhodnot(retezec, pocet_chyb):
         a = 'vyhra'       #vyhra hrace
     return(a)
 
-def kontrola_vstupu(pismeno):
+def kontrola_vstupu(pismeno):                       #zkontroluje, zda zadany znak je jedno pismeno
     return pismeno.isalpha() and len(pismeno) == 1
 
 
-def vyber_slova(seznam):
+def vyber_slova(seznam):  # Vybere slovo za seznamu
     return random.choice(seznam)

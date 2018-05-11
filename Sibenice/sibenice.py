@@ -1,6 +1,8 @@
 from pomocne_funkce import ukazuji_slovo, vyhodnot, tiskni_sibenici, kontrola_vstupu, vyber_slova
 
 slova = ["PARAPSYCHOLOGIE", "HROMDOPOLICE", "POSTAVA", "BRADAVICE", "BRONTOSAURUS", "KONIKLEC"]
+
+
 def sibenice():    # Prubeh hry
     "Vrati konecny stav hry"
     hadane_slovo = vyber_slova(slova)         #nahodny vyber slova + tisk hraciho pole
@@ -23,9 +25,7 @@ def sibenice():    # Prubeh hry
             neuspesne_pokusy += 1
             print(tiskni_sibenici(neuspesne_pokusy))
         pole_hra, hadane_slovo = ukazuji_slovo (zadane_pismeno, hadane_slovo,pole_hra) #tady se trochu divim,ze o funguje
-        print(pole_hra)
-
-                   #vytiskne stav hraciho pole po hadani pismene
+        print(pole_hra)                          #vytiskne stav hraciho pole po hadani pismene
         kontrola = vyhodnot(pole_hra, neuspesne_pokusy)
 
 

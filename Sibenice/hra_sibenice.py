@@ -1,6 +1,6 @@
 from sibenice import sibenice
 
-#slova = ["PARAPSYCHOLOGIE", "HROMDOPOLICE", "POSTAVA", "BRADAVICE", "BRONTOSAURUS", "KONIKLEC"]
+
 while True:                                                #dokud hrac chce hrat, hraje se
     dalsi_hra = input("Chces hadat slovo? (ano/ne)  ")
     try:                                                    #osetreni spatne odpovedi
