@@ -1,0 +1,7 @@
+[
+  "testy_sibnice.py::test_ukazuji_slovo",
+  "testy_sibnice.py::test_vyhodnot",
+  "testy_sibnice.py::test_tiskni",
+  "testy_sibnice.py::test_kontrola_vstupu",
+  "testy_sibnice.py::test_vyber_slova"
+]
