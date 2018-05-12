@@ -1,4 +1,19 @@
-#Pridala jsem if, aby se spocitaly pouze znaky, ktere jeste nejsou ve slovniku.
+#secteni znaku tak, aby se retezec projizdel jen jednou
+
+def secti_znaky2(retezec):
+    """Vrati slovnik, kde klice jsou jednotlive znaky se zadaneho retezce
+    a hodnoty je jejich cetnost"""
+    znaky = set(retezec)
+    slovnik_znaky = {}
+    for znak in retezec:
+        if znak not in slovnik_znaky:
+            slovnik_znaky[znak] = 1
+        else:
+            slovnik_znaky[znak] += 1
+    return(slovnik_znaky)
+
+
+ #Pridala jsem if, aby se spocitaly pouze znaky, ktere jeste nejsou ve slovniku.
 #Ale nejsem si jista, zda je to zefektivneni vyznamne.
 #Asi se to projevi u delsich textu.
 
@@ -28,6 +43,8 @@ def secti_znaky1(retezec):
         slovnik_znaky[znak] = retezec.count(znak)
     return(slovnik_znaky)
 
+
+
 #s enumerate se jeste musim poprat, nedarilo se mi to s nim vytisknout.
 def vypis_slovnik(slovnik):
     """Vypise polozky zadaneho slovniku, kazdou na jeden radek"""
@@ -44,3 +61,4 @@ def vypis_slovnik(slovnik):
 
 print(vypis_slovnik(secti_znaky('!kobyla ma maly bok!')))
 print(vypis_slovnik(secti_znaky1('!kobyla ma maly bok!')))
+print(vypis_slovnik(secti_znaky2('!kobyla ma maly bok!')))
