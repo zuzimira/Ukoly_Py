@@ -29,11 +29,8 @@ def test_utocim_negativni() :
 def test_tah_pocitace_delka_pole() :   #pozitivni
     assert tah_pocitace("o-o--------------------xx","o")== "ooo--------------------xx"
     assert tah_pocitace("o-o--xx","o")== "ooo--xx"
-    assert tah_pocitace("-oxxoxoxxoxoxxooxxoo") == "ooxxoxoxxoxoxxooxxoo"
-def test_tah_pocitace_delka_pole_negativni() : #VYVOLANI VYJIMKY
-    assert tah_pocitace("", "o")== 'o'
-def test_tah_pocitace_delka_pole_negativni1() : #VYVOLANI VYJIMKY
-    assert tah_pocitace("xoxoxoxox", "o")== "xoxoxoxoxo"
+    assert tah_pocitace("-oxxoxoxxoxoxxooxxoo", "o") == "ooxxoxoxxoxoxxooxxoo"
+
 
 
 
@@ -48,7 +45,7 @@ def test_tah_pocitace3() :  #negativni
     assert tah_pocitace("x----o--------------","o")!= "xo---o--------------"
 
 def test_tah_pocitace_spatne4() :   #negativni
-    assert tah_pocitace("x-o-------x---------",'o')|= "xoo-------x---------"
+    assert tah_pocitace("x-o-------x---------",'o')!= "xoo-------x---------"
 
 def test_tah_pocitace_spatne5() :   #pozitivni
     assert tah_pocitace("---xoxoxoxoxoxox----",'o')== "---xoxoxoxoxoxoxo---"

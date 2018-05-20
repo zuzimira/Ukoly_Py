@@ -1,0 +1,15 @@
+[
+  "test_piskvorky.py::test_vyhodnot_pozitivni",
+  "test_piskvorky.py::test_vyhodnot_negativni",
+  "test_piskvorky.py::test_nahodny_tah_pozitivni",
+  "test_piskvorky.py::test_nahodny_tah_negativni",
+  "test_piskvorky.py::test_nahodny_tah_negativni1",
+  "test_piskvorky.py::test_utocim_pozitivni",
+  "test_piskvorky.py::test_utocim_negativni",
+  "test_piskvorky.py::test_tah_pocitace_delka_pole",
+  "test_piskvorky.py::test_tah_pocitace1",
+  "test_piskvorky.py::test_tah_pocitace2",
+  "test_piskvorky.py::test_tah_pocitace3",
+  "test_piskvorky.py::test_tah_pocitace_spatne4",
+  "test_piskvorky.py::test_tah_pocitace_spatne5"
+]
