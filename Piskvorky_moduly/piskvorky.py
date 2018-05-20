@@ -5,9 +5,9 @@ from ai import tah_pocitace
 
 def vyhodnot(kolo): #vytvoren test
     """Vrati jednoznakovy retezec dle stavu hry"""
-    if "xxx" in kolo:           #vyhral pocitac
+    if "xxx" in kolo:           #vyhral hrac
         a="x"
-    elif "ooo" in kolo:         #vyhral hrac
+    elif "ooo" in kolo:         #vyhral tah_pocitace
         a = "o"
     elif "-" in kolo:           #hra jeste neskoncila
         a = "-"
