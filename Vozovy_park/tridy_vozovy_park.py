@@ -28,16 +28,10 @@ class Vuz:                                  #definice tridy Vuz
 
 
 class Elektro(Vuz):
-
     dojezd = 100        #km
-    def __str__(self):
-        return '{0:10} || {1:10} || {2:11} '.format(self.typ, self.spz, self.kapacita)
+
 
 class Hybrid(Elektro):
-
-    def __str__(self):
-        return '{0:10} || {1:10} || {2:11} '.format(self.typ, self.spz, self.kapacita)
-
     def cena_za_cestu(self, trasa, cena_e, cena_n):
         """Vrati cenu za km dle delky trasy"""
 
@@ -96,7 +90,10 @@ def najdi_vuz(seznam_vozu, osoby, trasa):
             if vuz.typ == 'Elektro' and trasa > vuz.dojezd:
                 pass
             else:
-                nabidka[vuz.spz] = {'typ': vuz.typ,'kapacita': vuz.kapacita, 'cena':vuz.cena_za_cestu(trasa, cena_elektrina, cena_nafta)}
+                nabidka[vuz.spz] = {'typ': vuz.typ,
+                                    'kapacita': vuz.kapacita,
+                                    'cena':vuz.cena_za_cestu(trasa, cena_elektrina, cena_nafta)
+                                    }
 
     minimalni = trasa * 1000                    #toto by bylo treba aktualizovat, nastrelila jsem to
     vyber = {}
@@ -138,7 +135,7 @@ def tiskni_nejlevnejsi(slovnik):
     print(24 * '=')
     for vuz,cena in slovnik.items():
         print(vypis.format(vuz, cena))
-
+    print(24 * '=')
 
 tiskni(vozovy_park)
 cena_elektrina = int(input('Zadej naklady na km pro elektro : '))     #Vstupy nejsou osetreny
